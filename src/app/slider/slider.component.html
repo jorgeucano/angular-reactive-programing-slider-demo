@@ -1,0 +1,21 @@
+<div class="container" *ngIf="simpsonQuotes">
+  <div class="row">
+    <div class="col-lg-2">
+      <img (click)="prev()" class="right" src="https://i.stack.imgur.com/0l39d.png" alt="">
+    </div>
+    <div class="col-lg-2" *ngIf="simpsonQuotes[slideNumber].characterDirection === 'Left'">
+      <img [src]="simpsonQuotes[slideNumber].image" />
+      <h4>{{simpsonQuotes[slideNumber].character}}</h4>
+    </div>
+    <div class="col-lg-6">
+      <h1>{{simpsonQuotes[slideNumber].quote}}</h1>
+    </div>
+    <div class="col-lg-2" *ngIf="simpsonQuotes[slideNumber].characterDirection === 'Right'">
+      <img [src]="simpsonQuotes[slideNumber].image" />
+      <h4>{{simpsonQuotes[slideNumber].character}}</h4>
+    </div>
+    <div class="col-lg-2">
+      <img (click)="next()" src="https://i.stack.imgur.com/0l39d.png" alt="">
+    </div>
+  </div>
+</div>
